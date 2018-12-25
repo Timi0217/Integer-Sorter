@@ -1,0 +1,121 @@
+Name: Oluwatimilehin Dayo-Kayode
+Title: All Sorts of Sorta Nice Sortin' Algorithms
+
+
+Purpose: Implementing a sorting program that can use different sorting 
+algorithms to sort a given vector of integers and either print the sorted
+list to screen or save it in a file
+
+Files: sortAlgs.h, sortAlgs.cpp, sorter.cpp, README, Makefile, test.txt
+	testSortAlgs.cpp.
+	
+File Purposes:
+	-sortAlgs.h: This file contains the function definitions of my sorting
+	 algorithms; merge sort, quick sort, and insertion sort
+	
+	-sortAlgs.cpp: This file contains my implemetation of the sorting 
+	algorithms declared in the sortAlgs.h file
+	 
+	-testSortAlgs.cpp: This file contains a main function to test the 
+	 sorting algorithms implemented in the sortAlgs.cpp file
+	  
+	-sorter.cpp: This file contains my implementation of a program to use
+	 the sorting algorithms created in the sortAlgs files. It either reads in
+	 data from a file provided from the user or takes in input from the cmd
+	 line as specified by the client, then sorts them and either prints the 
+	 sorted list back in the command line or saves them to a .txt file with 
+	 a filename specifying whether the data was read in from a file or the 
+	 command line, the sorting algorithm used, and the number of elements
+	 sorted.
+	
+	-test.txt: This file contains data used to test the programs ability to
+	 read from a file and save to another file from a file.
+	
+	-README: This file contains the purpose of my program, a list of my 
+	 programs and their purposes, and a detailed explanation of my sorting
+	 algorithms,data structures, and explanation of how I tested my program.
+	 
+	-Makefile: This file contains definitions of compiler targets and 
+	 executables for running my program
+	 
+Compiling and Running: My whole program runs by typing the command make' in the
+command line. It runs with the command './sorter'. My testfiles are compiled 
+with the command 'make testSortAlgs' and run with the command './testSortAlgs'
+
+Outline of Data Structures and Algorithms: The data structure that contains
+the data that my sorting algorithms where built to sort were vectors. They
+made the assignment more convenient as they have in-built functions
+that enabled populating it with data read in from the command line or from a 
+file a breeze. I was also able to determine the size of the data
+structure with another of its in-built functions which was instrumental in 
+creating my sorting algorithms.
+
+
+				INSERTION SORT
+My first sorting Algorithm, Insertion Sort, I chose because the specification
+didn't give me a choice. The way it worked was that it would divide the data
+into two sections; a sorted and an unsorted section. At the start of the 
+program, the sorted section only had the first data in it as since it was 
+just data, then it had to be sorted. The unsorted section comprised of all
+the other data. The algorithm would then basically pick the data right after
+the last data in the sorted section, compare it with the other data in the 
+sorted section, place it where necessary, by swapping where necessary all the 
+way down the sorted section till the first data in the sorted section
+and then increase the size of the sorted section by 1. The algorithm would 
+basically do this until the size of thesorted section was equal to the size of 
+the data being sorted at which point all the data would have been sorted.
+This sorting algorithm's asymptotic run time behavior is O(n^2) where n is the 
+size of the data to be sorted. this is basically because it's worse case 
+scenario which would be a list of data sorted the opposite way would require 
+each item to be compared and swapped with every other data in the list. I 
+tested this algorithm against a list with data sorted the opposite way, data
+sorted the correct way, and data sorted randomly, and indeed, its longest
+runtime was with the data sorted the opposite way, and its best runtime was 
+with the data sorted the right way while the randomly sorted data had a runtime
+inbetween both when sorted with my insertion sort. It works on a O(n^2) on 
+a reverse sorted list which is its worst case. It's best case ois and already
+sorted list
+
+
+
+				QUICK SORT
+My second sorting algorithm, quick sort quicksort uses divide-and-conquer, 
+and recursion. I pick an element, basically my 'pivot' from the array then 
+reorder the array so that all elements with values less than the pivot come 
+before the pivot, while all elements with values greater than the pivot come 
+after it (equal values can go either way). After this partitioning, the pivot is
+in its final position. I then recursively apply the above steps to the sub-array
+of elements with smaller values and separately to the sub-array of elements with
+greater values. The base case of the recursion is arrays of one, which never 
+need to be sorted because an array of size one is always sorted.
+It works on O(nlogn) if the list is unsorted and works at O(n^2) in its worst
+case which is when the list is sorted or nearly sorted
+
+						
+						
+					
+			 	BUCKET SORT
+My third sorting algorithm, Bucket Sort, is a sorting algorithm that works by 
+distributing the elements of an array into a number of buckets depending on the
+number of values of the largest number. Each bucket is 
+then sorted individually by recursively applying the bucket sorting algorithm. 
+My bucket sort basically works using the pigeonhole 
+principle I learned in discrete math becuase it essentially just creates these
+'holes'and drops the values that satisfy the conditions of these holes and 
+then sorts the values contained in these holes, and creates new holes again and
+then  does the whole process over again until everything is sorted. I thought
+it was really cool because unlike the other algorithms, you cant really see the
+sorting happening until it just happens almost out of the blue. It works 
+on O(n) however requires a lot of space which makes its worst case huge lists 
+of numbers because of how much space it'll require
+
+
+
+
+
+Testing Details: I had one test file, called 'testSortAlgs.cpp'. It tested each
+sorting algorithm against three different types of lists; a list with data
+sorted backwards, one with data sorted the right way, and one with data 
+sorted randomly. This way I was able to test the efficiency of my sorting 
+algorithms against their individual best and worst cases, and then against
+a random case.

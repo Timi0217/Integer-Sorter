@@ -1,0 +1,2752 @@
+Hello, odayok01. Your last provide for hw5:
+
+odayok01.1.log
+file name:/comp/15/grading/hw5/odayok01.1.log
+provide started by odayok01 on Wed Apr  5 01:55:12 2017
+Hello, odayok01<Oluwatimilehin A. Dayo-Kayode>!
+Receiving solution to 'hw5' in class 'comp15'.
+Checking all files:
+    sorter.cpp (2850 bytes)
+    sortAlgs.cpp (3167 bytes)
+    sortAlgs.h (310 bytes)
+    README (366 bytes)
+    Makefile (823 bytes)
+    test.txt (56 bytes)
+    testSortAlgs.cpp (1349 bytes)
+    testSorter.cpp (173 bytes)
+Total size of files is 9094 bytes.
+This is submission 1 of assignment hw5 in class 'comp15'.
+
+Are you ready to provide these for testing (yes or no)? 
+assignment was due Tue Apr  4 01:00:00 2017,
+but you submitted it on Wed Apr  5 01:55:26 2017.
+Computing lateness penalty.
+    copying file 'sorter.cpp'
+    copying file 'sortAlgs.cpp'
+    copying file 'sortAlgs.h'
+    copying file 'README'
+    copying file 'Makefile'
+    copying file 'test.txt'
+    copying file 'testSortAlgs.cpp'
+    copying file 'testSorter.cpp'
+Preparing for testing...
+
+//@@ ======== SUBMISSION SCREENING START ========
+//@@ odayok01 submitting from /dev/pts/0 on vm-hw05.eecs.tufts.edu
+//@@                       at 2017-04-05 01:55:26
+
+
+3 : Checking for valid userid...
+
+
+
+
+
+This is submission 1.
+Your maximum number of submissions for hw5 is 5.
+
+
+
+  9: Checking required files
+     OK        sorter.cpp
+     OK        sortAlgs.h
+     OK        sortAlgs.cpp
+     OK        README
+     OK        Makefile
+
+ 10: Checking if files are correct type
+     OK        sortAlgs.cpp
+     OK        sorter.cpp
+     OK        testSortAlgs.cpp
+     OK        testSorter.cpp
+
+ 11: Checking if files are correct type
+     OK        sortAlgs.h
+
+ 12: Checking if files are correct type
+     OK        README
+
+
+
+Checking Files...
+make[1]: Entering directory `/comp/15/grading/hw5/odayok01.1'
+rm -rf sortnums *.o
+make[1]: Leaving directory `/comp/15/grading/hw5/odayok01.1'
+Making program via Makefile
+No errors!
+No warnings!
+
+"Running tests. This might take a while. Please be patient..."
+
+********** Testing ./sortnums -s1 --print < randList10.txt **********
+Test of randList10.txt Failed!
+//---------- input file: randList10.txt ----------
+87
+35
+47
+97
+41
+66
+60
+86
+8
+49
+//---------- end input file ----------
+
+//---------- Expected output for input randList10.txt (first 8000 characters): 
+8
+35
+41
+47
+49
+60
+66
+86
+87
+97
+//---------- End of expected output for input randList10.txt.
+
+//---------- Your output for input randList10.txt (first 8000 characters): 
+//---------- End of your output for input randList10.txt.
+
+//---------- diff for randList10.txt (first 8000 characters): 
+1,10d0
+< 8
+< 35
+< 41
+< 47
+< 49
+< 60
+< 66
+< 86
+< 87
+< 97
+//---------- End of diff for randList10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5552== Memcheck, a memory error detector
+==5552== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5552== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5552== Command: ./sortnums -s1 --print
+==5552== 
+==5552== Conditional jump or move depends on uninitialised value(s)
+==5552==    at 0x404B9A: insertionSort(std::vector<int, std::allocator<int> >&) (sortAlgs.cpp:67)
+==5552==    by 0x402951: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:84)
+==5552==    by 0x4026FD: main (sorter.cpp:64)
+==5552== 
+==5552== 
+==5552== HEAP SUMMARY:
+==5552==     in use at exit: 72,704 bytes in 1 blocks
+==5552==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==5552== 
+==5552== LEAK SUMMARY:
+==5552==    definitely lost: 0 bytes in 0 blocks
+==5552==    indirectly lost: 0 bytes in 0 blocks
+==5552==      possibly lost: 0 bytes in 0 blocks
+==5552==    still reachable: 72,704 bytes in 1 blocks
+==5552==         suppressed: 0 bytes in 0 blocks
+==5552== Rerun with --leak-check=full to see details of leaked memory
+==5552== 
+==5552== For counts of detected and suppressed errors, rerun with: -v
+==5552== Use --track-origins=yes to see where uninitialised values come from
+==5552== ERROR SUMMARY: 10 errors from 1 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s1 --print < randList10.txt **********
+
+
+********** Testing ./sortnums -s1 --print < randList100.txt **********
+Test of randList100.txt Failed!
+//---------- input file: randList100.txt ----------
+432
+623
+290
+804
+44
+321
+139
+64
+211
+218
+224
+129
+591
+905
+62
+107
+334
+730
+41
+448
+714
+939
+471
+762
+511
+691
+888
+796
+123
+115
+866
+490
+525
+109
+569
+926
+40
+430
+886
+629
+221
+826
+662
+540
+727
+911
+584
+568
+914
+329
+999
+88
+787
+149
+486
+672
+194
+202
+640
+158
+752
+616
+907
+272
+264
+834
+978
+792
+258
+915
+264
+909
+74
+874
+408
+656
+386
+884
+550
+893
+160
+201
+762
+446
+791
+640
+9
+808
+599
+71
+359
+90
+385
+379
+881
+582
+238
+956
+509
+622
+//---------- end input file ----------
+
+//---------- Expected output for input randList100.txt (first 8000 characters): 
+9
+40
+41
+44
+62
+64
+71
+74
+88
+90
+107
+109
+115
+123
+129
+139
+149
+158
+160
+194
+201
+202
+211
+218
+221
+224
+238
+258
+264
+264
+272
+290
+321
+329
+334
+359
+379
+385
+386
+408
+430
+432
+446
+448
+471
+486
+490
+509
+511
+525
+540
+550
+568
+569
+582
+584
+591
+599
+616
+622
+623
+629
+640
+640
+656
+662
+672
+691
+714
+727
+730
+752
+762
+762
+787
+791
+792
+796
+804
+808
+826
+834
+866
+874
+881
+884
+886
+888
+893
+905
+907
+909
+911
+914
+915
+926
+939
+956
+978
+999
+//---------- End of expected output for input randList100.txt.
+
+//---------- Your output for input randList100.txt (first 8000 characters): 
+//---------- End of your output for input randList100.txt.
+
+//---------- diff for randList100.txt (first 8000 characters): 
+1,100d0
+< 9
+< 40
+< 41
+< 44
+< 62
+< 64
+< 71
+< 74
+< 88
+< 90
+< 107
+< 109
+< 115
+< 123
+< 129
+< 139
+< 149
+< 158
+< 160
+< 194
+< 201
+< 202
+< 211
+< 218
+< 221
+< 224
+< 238
+< 258
+< 264
+< 264
+< 272
+< 290
+< 321
+< 329
+< 334
+< 359
+< 379
+< 385
+< 386
+< 408
+< 430
+< 432
+< 446
+< 448
+< 471
+< 486
+< 490
+< 509
+< 511
+< 525
+< 540
+< 550
+< 568
+< 569
+< 582
+< 584
+< 591
+< 599
+< 616
+< 622
+< 623
+< 629
+< 640
+< 640
+< 656
+< 662
+< 672
+< 691
+< 714
+< 727
+< 730
+< 752
+< 762
+< 762
+< 787
+< 791
+< 792
+< 796
+< 804
+< 808
+< 826
+< 834
+< 866
+< 874
+< 881
+< 884
+< 886
+< 888
+< 893
+< 905
+< 907
+< 909
+< 911
+< 914
+< 915
+< 926
+< 939
+< 956
+< 978
+< 999
+//---------- End of diff for randList100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5670== Memcheck, a memory error detector
+==5670== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5670== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5670== Command: ./sortnums -s1 --print
+==5670== 
+==5670== Conditional jump or move depends on uninitialised value(s)
+==5670==    at 0x404B9A: insertionSort(std::vector<int, std::allocator<int> >&) (sortAlgs.cpp:67)
+==5670==    by 0x402951: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:84)
+==5670==    by 0x4026FD: main (sorter.cpp:64)
+==5670== 
+==5670== 
+==5670== HEAP SUMMARY:
+==5670==     in use at exit: 72,704 bytes in 1 blocks
+==5670==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==5670== 
+==5670== LEAK SUMMARY:
+==5670==    definitely lost: 0 bytes in 0 blocks
+==5670==    indirectly lost: 0 bytes in 0 blocks
+==5670==      possibly lost: 0 bytes in 0 blocks
+==5670==    still reachable: 72,704 bytes in 1 blocks
+==5670==         suppressed: 0 bytes in 0 blocks
+==5670== Rerun with --leak-check=full to see details of leaked memory
+==5670== 
+==5670== For counts of detected and suppressed errors, rerun with: -v
+==5670== Use --track-origins=yes to see where uninitialised values come from
+==5670== ERROR SUMMARY: 100 errors from 1 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s1 --print < randList100.txt **********
+
+
+********** Testing ./sortnums -s1 --print < reversed10.txt **********
+Test of reversed10.txt Failed!
+//---------- input file: reversed10.txt ----------
+91
+90
+85
+56
+51
+49
+46
+35
+16
+4
+//---------- end input file ----------
+
+//---------- Expected output for input reversed10.txt (first 8000 characters): 
+4
+16
+35
+46
+49
+51
+56
+85
+90
+91
+//---------- End of expected output for input reversed10.txt.
+
+//---------- Your output for input reversed10.txt (first 8000 characters): 
+//---------- End of your output for input reversed10.txt.
+
+//---------- diff for reversed10.txt (first 8000 characters): 
+1,10d0
+< 4
+< 16
+< 35
+< 46
+< 49
+< 51
+< 56
+< 85
+< 90
+< 91
+//---------- End of diff for reversed10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5713== Memcheck, a memory error detector
+==5713== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5713== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5713== Command: ./sortnums -s1 --print
+==5713== 
+==5713== Conditional jump or move depends on uninitialised value(s)
+==5713==    at 0x404B9A: insertionSort(std::vector<int, std::allocator<int> >&) (sortAlgs.cpp:67)
+==5713==    by 0x402951: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:84)
+==5713==    by 0x4026FD: main (sorter.cpp:64)
+==5713== 
+==5713== 
+==5713== HEAP SUMMARY:
+==5713==     in use at exit: 72,704 bytes in 1 blocks
+==5713==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==5713== 
+==5713== LEAK SUMMARY:
+==5713==    definitely lost: 0 bytes in 0 blocks
+==5713==    indirectly lost: 0 bytes in 0 blocks
+==5713==      possibly lost: 0 bytes in 0 blocks
+==5713==    still reachable: 72,704 bytes in 1 blocks
+==5713==         suppressed: 0 bytes in 0 blocks
+==5713== Rerun with --leak-check=full to see details of leaked memory
+==5713== 
+==5713== For counts of detected and suppressed errors, rerun with: -v
+==5713== Use --track-origins=yes to see where uninitialised values come from
+==5713== ERROR SUMMARY: 10 errors from 1 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s1 --print < reversed10.txt **********
+
+
+********** Testing ./sortnums -s1 --print < reversed100.txt **********
+Test of reversed100.txt Failed!
+//---------- input file: reversed100.txt ----------
+982
+973
+968
+953
+933
+920
+914
+911
+911
+904
+889
+880
+869
+868
+863
+862
+858
+851
+838
+825
+822
+819
+811
+810
+807
+791
+788
+782
+779
+747
+745
+733
+710
+704
+684
+681
+666
+659
+650
+647
+638
+631
+626
+617
+613
+603
+593
+589
+573
+570
+561
+559
+554
+546
+545
+532
+526
+508
+451
+441
+438
+438
+422
+409
+400
+395
+388
+344
+332
+321
+317
+304
+303
+301
+293
+269
+259
+253
+230
+182
+182
+174
+155
+149
+147
+143
+131
+129
+120
+106
+106
+77
+67
+47
+40
+22
+7
+4
+4
+1
+//---------- end input file ----------
+
+//---------- Expected output for input reversed100.txt (first 8000 characters): 
+1
+4
+4
+7
+22
+40
+47
+67
+77
+106
+106
+120
+129
+131
+143
+147
+149
+155
+174
+182
+182
+230
+253
+259
+269
+293
+301
+303
+304
+317
+321
+332
+344
+388
+395
+400
+409
+422
+438
+438
+441
+451
+508
+526
+532
+545
+546
+554
+559
+561
+570
+573
+589
+593
+603
+613
+617
+626
+631
+638
+647
+650
+659
+666
+681
+684
+704
+710
+733
+745
+747
+779
+782
+788
+791
+807
+810
+811
+819
+822
+825
+838
+851
+858
+862
+863
+868
+869
+880
+889
+904
+911
+911
+914
+920
+933
+953
+968
+973
+982
+//---------- End of expected output for input reversed100.txt.
+
+//---------- Your output for input reversed100.txt (first 8000 characters): 
+//---------- End of your output for input reversed100.txt.
+
+//---------- diff for reversed100.txt (first 8000 characters): 
+1,100d0
+< 1
+< 4
+< 4
+< 7
+< 22
+< 40
+< 47
+< 67
+< 77
+< 106
+< 106
+< 120
+< 129
+< 131
+< 143
+< 147
+< 149
+< 155
+< 174
+< 182
+< 182
+< 230
+< 253
+< 259
+< 269
+< 293
+< 301
+< 303
+< 304
+< 317
+< 321
+< 332
+< 344
+< 388
+< 395
+< 400
+< 409
+< 422
+< 438
+< 438
+< 441
+< 451
+< 508
+< 526
+< 532
+< 545
+< 546
+< 554
+< 559
+< 561
+< 570
+< 573
+< 589
+< 593
+< 603
+< 613
+< 617
+< 626
+< 631
+< 638
+< 647
+< 650
+< 659
+< 666
+< 681
+< 684
+< 704
+< 710
+< 733
+< 745
+< 747
+< 779
+< 782
+< 788
+< 791
+< 807
+< 810
+< 811
+< 819
+< 822
+< 825
+< 838
+< 851
+< 858
+< 862
+< 863
+< 868
+< 869
+< 880
+< 889
+< 904
+< 911
+< 911
+< 914
+< 920
+< 933
+< 953
+< 968
+< 973
+< 982
+//---------- End of diff for reversed100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5750== Memcheck, a memory error detector
+==5750== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5750== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5750== Command: ./sortnums -s1 --print
+==5750== 
+==5750== Conditional jump or move depends on uninitialised value(s)
+==5750==    at 0x404B9A: insertionSort(std::vector<int, std::allocator<int> >&) (sortAlgs.cpp:67)
+==5750==    by 0x402951: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:84)
+==5750==    by 0x4026FD: main (sorter.cpp:64)
+==5750== 
+==5750== 
+==5750== HEAP SUMMARY:
+==5750==     in use at exit: 72,704 bytes in 1 blocks
+==5750==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==5750== 
+==5750== LEAK SUMMARY:
+==5750==    definitely lost: 0 bytes in 0 blocks
+==5750==    indirectly lost: 0 bytes in 0 blocks
+==5750==      possibly lost: 0 bytes in 0 blocks
+==5750==    still reachable: 72,704 bytes in 1 blocks
+==5750==         suppressed: 0 bytes in 0 blocks
+==5750== Rerun with --leak-check=full to see details of leaked memory
+==5750== 
+==5750== For counts of detected and suppressed errors, rerun with: -v
+==5750== Use --track-origins=yes to see where uninitialised values come from
+==5750== ERROR SUMMARY: 100 errors from 1 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s1 --print < reversed100.txt **********
+
+
+********** Testing ./sortnums -s2 --print < randList10.txt **********
+Test of randList10.txt Failed!
+//---------- input file: randList10.txt ----------
+87
+35
+47
+97
+41
+66
+60
+86
+8
+49
+//---------- end input file ----------
+
+//---------- Expected output for input randList10.txt (first 8000 characters): 
+8
+35
+41
+47
+49
+60
+66
+86
+87
+97
+//---------- End of expected output for input randList10.txt.
+
+//---------- Your output for input randList10.txt (first 8000 characters): 
+//---------- End of your output for input randList10.txt.
+
+//---------- diff for randList10.txt (first 8000 characters): 
+1,10d0
+< 8
+< 35
+< 41
+< 47
+< 49
+< 60
+< 66
+< 86
+< 87
+< 97
+//---------- End of diff for randList10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5792== Memcheck, a memory error detector
+==5792== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5792== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5792== Command: ./sortnums -s2 --print
+==5792== 
+==5792== Conditional jump or move depends on uninitialised value(s)
+==5792==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5792==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5792==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5792==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5792==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5792==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5792==    by 0x4026FD: main (sorter.cpp:64)
+==5792== 
+==5792== Conditional jump or move depends on uninitialised value(s)
+==5792==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5792==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5792==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5792==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5792==    by 0x4026FD: main (sorter.cpp:64)
+==5792== 
+==5792== Conditional jump or move depends on uninitialised value(s)
+==5792==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5792==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5792==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5792==    by 0x4026FD: main (sorter.cpp:64)
+==5792== 
+==5792== 
+==5792== HEAP SUMMARY:
+==5792==     in use at exit: 72,704 bytes in 1 blocks
+==5792==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==5792== 
+==5792== LEAK SUMMARY:
+==5792==    definitely lost: 0 bytes in 0 blocks
+==5792==    indirectly lost: 0 bytes in 0 blocks
+==5792==      possibly lost: 0 bytes in 0 blocks
+==5792==    still reachable: 72,704 bytes in 1 blocks
+==5792==         suppressed: 0 bytes in 0 blocks
+==5792== Rerun with --leak-check=full to see details of leaked memory
+==5792== 
+==5792== For counts of detected and suppressed errors, rerun with: -v
+==5792== Use --track-origins=yes to see where uninitialised values come from
+==5792== ERROR SUMMARY: 4 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s2 --print < randList10.txt **********
+
+
+********** Testing ./sortnums -s2 --print < randList100.txt **********
+Test of randList100.txt Failed!
+//---------- input file: randList100.txt ----------
+432
+623
+290
+804
+44
+321
+139
+64
+211
+218
+224
+129
+591
+905
+62
+107
+334
+730
+41
+448
+714
+939
+471
+762
+511
+691
+888
+796
+123
+115
+866
+490
+525
+109
+569
+926
+40
+430
+886
+629
+221
+826
+662
+540
+727
+911
+584
+568
+914
+329
+999
+88
+787
+149
+486
+672
+194
+202
+640
+158
+752
+616
+907
+272
+264
+834
+978
+792
+258
+915
+264
+909
+74
+874
+408
+656
+386
+884
+550
+893
+160
+201
+762
+446
+791
+640
+9
+808
+599
+71
+359
+90
+385
+379
+881
+582
+238
+956
+509
+622
+//---------- end input file ----------
+
+//---------- Expected output for input randList100.txt (first 8000 characters): 
+9
+40
+41
+44
+62
+64
+71
+74
+88
+90
+107
+109
+115
+123
+129
+139
+149
+158
+160
+194
+201
+202
+211
+218
+221
+224
+238
+258
+264
+264
+272
+290
+321
+329
+334
+359
+379
+385
+386
+408
+430
+432
+446
+448
+471
+486
+490
+509
+511
+525
+540
+550
+568
+569
+582
+584
+591
+599
+616
+622
+623
+629
+640
+640
+656
+662
+672
+691
+714
+727
+730
+752
+762
+762
+787
+791
+792
+796
+804
+808
+826
+834
+866
+874
+881
+884
+886
+888
+893
+905
+907
+909
+911
+914
+915
+926
+939
+956
+978
+999
+//---------- End of expected output for input randList100.txt.
+
+//---------- Your output for input randList100.txt (first 8000 characters): 
+//---------- End of your output for input randList100.txt.
+
+//---------- diff for randList100.txt (first 8000 characters): 
+1,100d0
+< 9
+< 40
+< 41
+< 44
+< 62
+< 64
+< 71
+< 74
+< 88
+< 90
+< 107
+< 109
+< 115
+< 123
+< 129
+< 139
+< 149
+< 158
+< 160
+< 194
+< 201
+< 202
+< 211
+< 218
+< 221
+< 224
+< 238
+< 258
+< 264
+< 264
+< 272
+< 290
+< 321
+< 329
+< 334
+< 359
+< 379
+< 385
+< 386
+< 408
+< 430
+< 432
+< 446
+< 448
+< 471
+< 486
+< 490
+< 509
+< 511
+< 525
+< 540
+< 550
+< 568
+< 569
+< 582
+< 584
+< 591
+< 599
+< 616
+< 622
+< 623
+< 629
+< 640
+< 640
+< 656
+< 662
+< 672
+< 691
+< 714
+< 727
+< 730
+< 752
+< 762
+< 762
+< 787
+< 791
+< 792
+< 796
+< 804
+< 808
+< 826
+< 834
+< 866
+< 874
+< 881
+< 884
+< 886
+< 888
+< 893
+< 905
+< 907
+< 909
+< 911
+< 914
+< 915
+< 926
+< 939
+< 956
+< 978
+< 999
+//---------- End of diff for randList100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5835== Memcheck, a memory error detector
+==5835== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5835== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5835== Command: ./sortnums -s2 --print
+==5835== 
+==5835== Conditional jump or move depends on uninitialised value(s)
+==5835==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5835==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5835==    by 0x4026FD: main (sorter.cpp:64)
+==5835== 
+==5835== Conditional jump or move depends on uninitialised value(s)
+==5835==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5835==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5835==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5835==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5835==    by 0x4026FD: main (sorter.cpp:64)
+==5835== 
+==5835== Conditional jump or move depends on uninitialised value(s)
+==5835==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5835==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5835==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5835==    by 0x4026FD: main (sorter.cpp:64)
+==5835== 
+==5835== 
+==5835== HEAP SUMMARY:
+==5835==     in use at exit: 72,704 bytes in 1 blocks
+==5835==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==5835== 
+==5835== LEAK SUMMARY:
+==5835==    definitely lost: 0 bytes in 0 blocks
+==5835==    indirectly lost: 0 bytes in 0 blocks
+==5835==      possibly lost: 0 bytes in 0 blocks
+==5835==    still reachable: 72,704 bytes in 1 blocks
+==5835==         suppressed: 0 bytes in 0 blocks
+==5835== Rerun with --leak-check=full to see details of leaked memory
+==5835== 
+==5835== For counts of detected and suppressed errors, rerun with: -v
+==5835== Use --track-origins=yes to see where uninitialised values come from
+==5835== ERROR SUMMARY: 7 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s2 --print < randList100.txt **********
+
+
+********** Testing ./sortnums -s2 --print < reversed10.txt **********
+Test of reversed10.txt Failed!
+//---------- input file: reversed10.txt ----------
+91
+90
+85
+56
+51
+49
+46
+35
+16
+4
+//---------- end input file ----------
+
+//---------- Expected output for input reversed10.txt (first 8000 characters): 
+4
+16
+35
+46
+49
+51
+56
+85
+90
+91
+//---------- End of expected output for input reversed10.txt.
+
+//---------- Your output for input reversed10.txt (first 8000 characters): 
+//---------- End of your output for input reversed10.txt.
+
+//---------- diff for reversed10.txt (first 8000 characters): 
+1,10d0
+< 4
+< 16
+< 35
+< 46
+< 49
+< 51
+< 56
+< 85
+< 90
+< 91
+//---------- End of diff for reversed10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5890== Memcheck, a memory error detector
+==5890== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5890== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5890== Command: ./sortnums -s2 --print
+==5890== 
+==5890== Conditional jump or move depends on uninitialised value(s)
+==5890==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5890==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5890==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5890==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5890==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5890==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5890==    by 0x4026FD: main (sorter.cpp:64)
+==5890== 
+==5890== Conditional jump or move depends on uninitialised value(s)
+==5890==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5890==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5890==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5890==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5890==    by 0x4026FD: main (sorter.cpp:64)
+==5890== 
+==5890== Conditional jump or move depends on uninitialised value(s)
+==5890==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5890==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5890==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5890==    by 0x4026FD: main (sorter.cpp:64)
+==5890== 
+==5890== 
+==5890== HEAP SUMMARY:
+==5890==     in use at exit: 72,704 bytes in 1 blocks
+==5890==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==5890== 
+==5890== LEAK SUMMARY:
+==5890==    definitely lost: 0 bytes in 0 blocks
+==5890==    indirectly lost: 0 bytes in 0 blocks
+==5890==      possibly lost: 0 bytes in 0 blocks
+==5890==    still reachable: 72,704 bytes in 1 blocks
+==5890==         suppressed: 0 bytes in 0 blocks
+==5890== Rerun with --leak-check=full to see details of leaked memory
+==5890== 
+==5890== For counts of detected and suppressed errors, rerun with: -v
+==5890== Use --track-origins=yes to see where uninitialised values come from
+==5890== ERROR SUMMARY: 4 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s2 --print < reversed10.txt **********
+
+
+********** Testing ./sortnums -s2 --print < reversed100.txt **********
+Test of reversed100.txt Failed!
+//---------- input file: reversed100.txt ----------
+982
+973
+968
+953
+933
+920
+914
+911
+911
+904
+889
+880
+869
+868
+863
+862
+858
+851
+838
+825
+822
+819
+811
+810
+807
+791
+788
+782
+779
+747
+745
+733
+710
+704
+684
+681
+666
+659
+650
+647
+638
+631
+626
+617
+613
+603
+593
+589
+573
+570
+561
+559
+554
+546
+545
+532
+526
+508
+451
+441
+438
+438
+422
+409
+400
+395
+388
+344
+332
+321
+317
+304
+303
+301
+293
+269
+259
+253
+230
+182
+182
+174
+155
+149
+147
+143
+131
+129
+120
+106
+106
+77
+67
+47
+40
+22
+7
+4
+4
+1
+//---------- end input file ----------
+
+//---------- Expected output for input reversed100.txt (first 8000 characters): 
+1
+4
+4
+7
+22
+40
+47
+67
+77
+106
+106
+120
+129
+131
+143
+147
+149
+155
+174
+182
+182
+230
+253
+259
+269
+293
+301
+303
+304
+317
+321
+332
+344
+388
+395
+400
+409
+422
+438
+438
+441
+451
+508
+526
+532
+545
+546
+554
+559
+561
+570
+573
+589
+593
+603
+613
+617
+626
+631
+638
+647
+650
+659
+666
+681
+684
+704
+710
+733
+745
+747
+779
+782
+788
+791
+807
+810
+811
+819
+822
+825
+838
+851
+858
+862
+863
+868
+869
+880
+889
+904
+911
+911
+914
+920
+933
+953
+968
+973
+982
+//---------- End of expected output for input reversed100.txt.
+
+//---------- Your output for input reversed100.txt (first 8000 characters): 
+//---------- End of your output for input reversed100.txt.
+
+//---------- diff for reversed100.txt (first 8000 characters): 
+1,100d0
+< 1
+< 4
+< 4
+< 7
+< 22
+< 40
+< 47
+< 67
+< 77
+< 106
+< 106
+< 120
+< 129
+< 131
+< 143
+< 147
+< 149
+< 155
+< 174
+< 182
+< 182
+< 230
+< 253
+< 259
+< 269
+< 293
+< 301
+< 303
+< 304
+< 317
+< 321
+< 332
+< 344
+< 388
+< 395
+< 400
+< 409
+< 422
+< 438
+< 438
+< 441
+< 451
+< 508
+< 526
+< 532
+< 545
+< 546
+< 554
+< 559
+< 561
+< 570
+< 573
+< 589
+< 593
+< 603
+< 613
+< 617
+< 626
+< 631
+< 638
+< 647
+< 650
+< 659
+< 666
+< 681
+< 684
+< 704
+< 710
+< 733
+< 745
+< 747
+< 779
+< 782
+< 788
+< 791
+< 807
+< 810
+< 811
+< 819
+< 822
+< 825
+< 838
+< 851
+< 858
+< 862
+< 863
+< 868
+< 869
+< 880
+< 889
+< 904
+< 911
+< 911
+< 914
+< 920
+< 933
+< 953
+< 968
+< 973
+< 982
+//---------- End of diff for reversed100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5926== Memcheck, a memory error detector
+==5926== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5926== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5926== Command: ./sortnums -s2 --print
+==5926== 
+==5926== Conditional jump or move depends on uninitialised value(s)
+==5926==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5926==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5926==    by 0x4026FD: main (sorter.cpp:64)
+==5926== 
+==5926== Conditional jump or move depends on uninitialised value(s)
+==5926==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5926==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5926==    by 0x404EDC: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:150)
+==5926==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5926==    by 0x4026FD: main (sorter.cpp:64)
+==5926== 
+==5926== Conditional jump or move depends on uninitialised value(s)
+==5926==    at 0x404D84: merge(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:107)
+==5926==    by 0x404F02: mergeSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:153)
+==5926==    by 0x4029CC: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:89)
+==5926==    by 0x4026FD: main (sorter.cpp:64)
+==5926== 
+==5926== 
+==5926== HEAP SUMMARY:
+==5926==     in use at exit: 72,704 bytes in 1 blocks
+==5926==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==5926== 
+==5926== LEAK SUMMARY:
+==5926==    definitely lost: 0 bytes in 0 blocks
+==5926==    indirectly lost: 0 bytes in 0 blocks
+==5926==      possibly lost: 0 bytes in 0 blocks
+==5926==    still reachable: 72,704 bytes in 1 blocks
+==5926==         suppressed: 0 bytes in 0 blocks
+==5926== Rerun with --leak-check=full to see details of leaked memory
+==5926== 
+==5926== For counts of detected and suppressed errors, rerun with: -v
+==5926== Use --track-origins=yes to see where uninitialised values come from
+==5926== ERROR SUMMARY: 7 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s2 --print < reversed100.txt **********
+
+
+********** Testing ./sortnums -s3 --print < randList10.txt **********
+Test of randList10.txt Failed!
+//---------- input file: randList10.txt ----------
+87
+35
+47
+97
+41
+66
+60
+86
+8
+49
+//---------- end input file ----------
+
+//---------- Expected output for input randList10.txt (first 8000 characters): 
+8
+35
+41
+47
+49
+60
+66
+86
+87
+97
+//---------- End of expected output for input randList10.txt.
+
+//---------- Your output for input randList10.txt (first 8000 characters): 
+//---------- End of your output for input randList10.txt.
+
+//---------- diff for randList10.txt (first 8000 characters): 
+1,10d0
+< 8
+< 35
+< 41
+< 47
+< 49
+< 60
+< 66
+< 86
+< 87
+< 97
+//---------- End of diff for randList10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==5965== Memcheck, a memory error detector
+==5965== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5965== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5965== Command: ./sortnums -s3 --print
+==5965== 
+==5965== Conditional jump or move depends on uninitialised value(s)
+==5965==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==5965==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==5965==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==5965==    by 0x4026FD: main (sorter.cpp:64)
+==5965== 
+==5965== Conditional jump or move depends on uninitialised value(s)
+==5965==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==5965==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==5965==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==5965==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==5965==    by 0x4026FD: main (sorter.cpp:64)
+==5965== 
+==5965== Conditional jump or move depends on uninitialised value(s)
+==5965==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==5965==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==5965==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==5965==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==5965==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==5965==    by 0x4026FD: main (sorter.cpp:64)
+==5965== 
+==5965== 
+==5965== HEAP SUMMARY:
+==5965==     in use at exit: 72,704 bytes in 1 blocks
+==5965==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==5965== 
+==5965== LEAK SUMMARY:
+==5965==    definitely lost: 0 bytes in 0 blocks
+==5965==    indirectly lost: 0 bytes in 0 blocks
+==5965==      possibly lost: 0 bytes in 0 blocks
+==5965==    still reachable: 72,704 bytes in 1 blocks
+==5965==         suppressed: 0 bytes in 0 blocks
+==5965== Rerun with --leak-check=full to see details of leaked memory
+==5965== 
+==5965== For counts of detected and suppressed errors, rerun with: -v
+==5965== Use --track-origins=yes to see where uninitialised values come from
+==5965== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s3 --print < randList10.txt **********
+
+
+********** Testing ./sortnums -s3 --print < randList100.txt **********
+Test of randList100.txt Failed!
+//---------- input file: randList100.txt ----------
+432
+623
+290
+804
+44
+321
+139
+64
+211
+218
+224
+129
+591
+905
+62
+107
+334
+730
+41
+448
+714
+939
+471
+762
+511
+691
+888
+796
+123
+115
+866
+490
+525
+109
+569
+926
+40
+430
+886
+629
+221
+826
+662
+540
+727
+911
+584
+568
+914
+329
+999
+88
+787
+149
+486
+672
+194
+202
+640
+158
+752
+616
+907
+272
+264
+834
+978
+792
+258
+915
+264
+909
+74
+874
+408
+656
+386
+884
+550
+893
+160
+201
+762
+446
+791
+640
+9
+808
+599
+71
+359
+90
+385
+379
+881
+582
+238
+956
+509
+622
+//---------- end input file ----------
+
+//---------- Expected output for input randList100.txt (first 8000 characters): 
+9
+40
+41
+44
+62
+64
+71
+74
+88
+90
+107
+109
+115
+123
+129
+139
+149
+158
+160
+194
+201
+202
+211
+218
+221
+224
+238
+258
+264
+264
+272
+290
+321
+329
+334
+359
+379
+385
+386
+408
+430
+432
+446
+448
+471
+486
+490
+509
+511
+525
+540
+550
+568
+569
+582
+584
+591
+599
+616
+622
+623
+629
+640
+640
+656
+662
+672
+691
+714
+727
+730
+752
+762
+762
+787
+791
+792
+796
+804
+808
+826
+834
+866
+874
+881
+884
+886
+888
+893
+905
+907
+909
+911
+914
+915
+926
+939
+956
+978
+999
+//---------- End of expected output for input randList100.txt.
+
+//---------- Your output for input randList100.txt (first 8000 characters): 
+//---------- End of your output for input randList100.txt.
+
+//---------- diff for randList100.txt (first 8000 characters): 
+1,100d0
+< 9
+< 40
+< 41
+< 44
+< 62
+< 64
+< 71
+< 74
+< 88
+< 90
+< 107
+< 109
+< 115
+< 123
+< 129
+< 139
+< 149
+< 158
+< 160
+< 194
+< 201
+< 202
+< 211
+< 218
+< 221
+< 224
+< 238
+< 258
+< 264
+< 264
+< 272
+< 290
+< 321
+< 329
+< 334
+< 359
+< 379
+< 385
+< 386
+< 408
+< 430
+< 432
+< 446
+< 448
+< 471
+< 486
+< 490
+< 509
+< 511
+< 525
+< 540
+< 550
+< 568
+< 569
+< 582
+< 584
+< 591
+< 599
+< 616
+< 622
+< 623
+< 629
+< 640
+< 640
+< 656
+< 662
+< 672
+< 691
+< 714
+< 727
+< 730
+< 752
+< 762
+< 762
+< 787
+< 791
+< 792
+< 796
+< 804
+< 808
+< 826
+< 834
+< 866
+< 874
+< 881
+< 884
+< 886
+< 888
+< 893
+< 905
+< 907
+< 909
+< 911
+< 914
+< 915
+< 926
+< 939
+< 956
+< 978
+< 999
+//---------- End of diff for randList100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==6000== Memcheck, a memory error detector
+==6000== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6000== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6000== Command: ./sortnums -s3 --print
+==6000== 
+==6000== Conditional jump or move depends on uninitialised value(s)
+==6000==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6000==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6000==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6000==    by 0x4026FD: main (sorter.cpp:64)
+==6000== 
+==6000== Conditional jump or move depends on uninitialised value(s)
+==6000==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6000==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6000==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6000==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6000==    by 0x4026FD: main (sorter.cpp:64)
+==6000== 
+==6000== Conditional jump or move depends on uninitialised value(s)
+==6000==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6000==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6000==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6000==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6000==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6000==    by 0x4026FD: main (sorter.cpp:64)
+==6000== 
+==6000== 
+==6000== HEAP SUMMARY:
+==6000==     in use at exit: 72,704 bytes in 1 blocks
+==6000==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==6000== 
+==6000== LEAK SUMMARY:
+==6000==    definitely lost: 0 bytes in 0 blocks
+==6000==    indirectly lost: 0 bytes in 0 blocks
+==6000==      possibly lost: 0 bytes in 0 blocks
+==6000==    still reachable: 72,704 bytes in 1 blocks
+==6000==         suppressed: 0 bytes in 0 blocks
+==6000== Rerun with --leak-check=full to see details of leaked memory
+==6000== 
+==6000== For counts of detected and suppressed errors, rerun with: -v
+==6000== Use --track-origins=yes to see where uninitialised values come from
+==6000== ERROR SUMMARY: 10 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s3 --print < randList100.txt **********
+
+
+********** Testing ./sortnums -s3 --print < reversed10.txt **********
+Test of reversed10.txt Failed!
+//---------- input file: reversed10.txt ----------
+91
+90
+85
+56
+51
+49
+46
+35
+16
+4
+//---------- end input file ----------
+
+//---------- Expected output for input reversed10.txt (first 8000 characters): 
+4
+16
+35
+46
+49
+51
+56
+85
+90
+91
+//---------- End of expected output for input reversed10.txt.
+
+//---------- Your output for input reversed10.txt (first 8000 characters): 
+//---------- End of your output for input reversed10.txt.
+
+//---------- diff for reversed10.txt (first 8000 characters): 
+1,10d0
+< 4
+< 16
+< 35
+< 46
+< 49
+< 51
+< 56
+< 85
+< 90
+< 91
+//---------- End of diff for reversed10.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==6035== Memcheck, a memory error detector
+==6035== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6035== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6035== Command: ./sortnums -s3 --print
+==6035== 
+==6035== Conditional jump or move depends on uninitialised value(s)
+==6035==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6035==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6035==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6035==    by 0x4026FD: main (sorter.cpp:64)
+==6035== 
+==6035== Conditional jump or move depends on uninitialised value(s)
+==6035==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6035==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6035==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6035==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6035==    by 0x4026FD: main (sorter.cpp:64)
+==6035== 
+==6035== Conditional jump or move depends on uninitialised value(s)
+==6035==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6035==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6035==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6035==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6035==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6035==    by 0x4026FD: main (sorter.cpp:64)
+==6035== 
+==6035== 
+==6035== HEAP SUMMARY:
+==6035==     in use at exit: 72,704 bytes in 1 blocks
+==6035==   total heap usage: 7 allocs, 6 frees, 72,872 bytes allocated
+==6035== 
+==6035== LEAK SUMMARY:
+==6035==    definitely lost: 0 bytes in 0 blocks
+==6035==    indirectly lost: 0 bytes in 0 blocks
+==6035==      possibly lost: 0 bytes in 0 blocks
+==6035==    still reachable: 72,704 bytes in 1 blocks
+==6035==         suppressed: 0 bytes in 0 blocks
+==6035== Rerun with --leak-check=full to see details of leaked memory
+==6035== 
+==6035== For counts of detected and suppressed errors, rerun with: -v
+==6035== Use --track-origins=yes to see where uninitialised values come from
+==6035== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s3 --print < reversed10.txt **********
+
+
+********** Testing ./sortnums -s3 --print < reversed100.txt **********
+Test of reversed100.txt Failed!
+//---------- input file: reversed100.txt ----------
+982
+973
+968
+953
+933
+920
+914
+911
+911
+904
+889
+880
+869
+868
+863
+862
+858
+851
+838
+825
+822
+819
+811
+810
+807
+791
+788
+782
+779
+747
+745
+733
+710
+704
+684
+681
+666
+659
+650
+647
+638
+631
+626
+617
+613
+603
+593
+589
+573
+570
+561
+559
+554
+546
+545
+532
+526
+508
+451
+441
+438
+438
+422
+409
+400
+395
+388
+344
+332
+321
+317
+304
+303
+301
+293
+269
+259
+253
+230
+182
+182
+174
+155
+149
+147
+143
+131
+129
+120
+106
+106
+77
+67
+47
+40
+22
+7
+4
+4
+1
+//---------- end input file ----------
+
+//---------- Expected output for input reversed100.txt (first 8000 characters): 
+1
+4
+4
+7
+22
+40
+47
+67
+77
+106
+106
+120
+129
+131
+143
+147
+149
+155
+174
+182
+182
+230
+253
+259
+269
+293
+301
+303
+304
+317
+321
+332
+344
+388
+395
+400
+409
+422
+438
+438
+441
+451
+508
+526
+532
+545
+546
+554
+559
+561
+570
+573
+589
+593
+603
+613
+617
+626
+631
+638
+647
+650
+659
+666
+681
+684
+704
+710
+733
+745
+747
+779
+782
+788
+791
+807
+810
+811
+819
+822
+825
+838
+851
+858
+862
+863
+868
+869
+880
+889
+904
+911
+911
+914
+920
+933
+953
+968
+973
+982
+//---------- End of expected output for input reversed100.txt.
+
+//---------- Your output for input reversed100.txt (first 8000 characters): 
+//---------- End of your output for input reversed100.txt.
+
+//---------- diff for reversed100.txt (first 8000 characters): 
+1,100d0
+< 1
+< 4
+< 4
+< 7
+< 22
+< 40
+< 47
+< 67
+< 77
+< 106
+< 106
+< 120
+< 129
+< 131
+< 143
+< 147
+< 149
+< 155
+< 174
+< 182
+< 182
+< 230
+< 253
+< 259
+< 269
+< 293
+< 301
+< 303
+< 304
+< 317
+< 321
+< 332
+< 344
+< 388
+< 395
+< 400
+< 409
+< 422
+< 438
+< 438
+< 441
+< 451
+< 508
+< 526
+< 532
+< 545
+< 546
+< 554
+< 559
+< 561
+< 570
+< 573
+< 589
+< 593
+< 603
+< 613
+< 617
+< 626
+< 631
+< 638
+< 647
+< 650
+< 659
+< 666
+< 681
+< 684
+< 704
+< 710
+< 733
+< 745
+< 747
+< 779
+< 782
+< 788
+< 791
+< 807
+< 810
+< 811
+< 819
+< 822
+< 825
+< 838
+< 851
+< 858
+< 862
+< 863
+< 868
+< 869
+< 880
+< 889
+< 904
+< 911
+< 911
+< 914
+< 920
+< 933
+< 953
+< 968
+< 973
+< 982
+//---------- End of diff for reversed100.txt.
+Running valgrind to check for memory leaks.
+valgrind reported errors!
+==6070== Memcheck, a memory error detector
+==6070== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6070== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6070== Command: ./sortnums -s3 --print
+==6070== 
+==6070== Conditional jump or move depends on uninitialised value(s)
+==6070==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6070==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6070==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6070==    by 0x4026FD: main (sorter.cpp:64)
+==6070== 
+==6070== Conditional jump or move depends on uninitialised value(s)
+==6070==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6070==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6070==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6070==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6070==    by 0x4026FD: main (sorter.cpp:64)
+==6070== 
+==6070== Conditional jump or move depends on uninitialised value(s)
+==6070==    at 0x404929: partition(std::vector<int, std::allocator<int> >&, int, int, int) (sortAlgs.cpp:26)
+==6070==    by 0x404A38: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:43)
+==6070==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6070==    by 0x404A74: quickSort(std::vector<int, std::allocator<int> >&, int, int) (sortAlgs.cpp:45)
+==6070==    by 0x402A35: run(std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (sorter.cpp:94)
+==6070==    by 0x4026FD: main (sorter.cpp:64)
+==6070== 
+==6070== 
+==6070== HEAP SUMMARY:
+==6070==     in use at exit: 72,704 bytes in 1 blocks
+==6070==   total heap usage: 10 allocs, 9 frees, 74,128 bytes allocated
+==6070== 
+==6070== LEAK SUMMARY:
+==6070==    definitely lost: 0 bytes in 0 blocks
+==6070==    indirectly lost: 0 bytes in 0 blocks
+==6070==      possibly lost: 0 bytes in 0 blocks
+==6070==    still reachable: 72,704 bytes in 1 blocks
+==6070==         suppressed: 0 bytes in 0 blocks
+==6070== Rerun with --leak-check=full to see details of leaked memory
+==6070== 
+==6070== For counts of detected and suppressed errors, rerun with: -v
+==6070== Use --track-origins=yes to see where uninitialised values come from
+==6070== ERROR SUMMARY: 7 errors from 3 contexts (suppressed: 3 from 3)
+********** Done Testing ./sortnums -s3 --print < reversed100.txt **********
+
+
+*/*/*/*/*/ Some of the tests failed! /*/*/*/*/*
+Tests that failed: 
+randList10.txt, valgrind(randList10.txt), randList100.txt, valgrind(randList100.txt), reversed10.txt, valgrind(reversed10.txt), reversed100.txt, valgrind(reversed100.txt), randList10.txt, valgrind(randList10.txt), randList100.txt, valgrind(randList100.txt), reversed10.txt, valgrind(reversed10.txt), reversed100.txt, valgrind(reversed100.txt), randList10.txt, valgrind(randList10.txt), randList100.txt, valgrind(randList100.txt), reversed10.txt, valgrind(reversed10.txt), reversed100.txt, valgrind(reversed100.txt), 
+
+//@@                       at 2017-04-05 01:55:59
+//@@ ======== SUBMISSION SCREENING END =====
+
+...done preparing for testing.
+provide started by odayok01 on Wed Apr  5 01:55:59 2017
+your submission has been accepted!
+cleaning up after testing...
+Cleaning up...
+...done cleaning up after testing
+your submission is complete!
